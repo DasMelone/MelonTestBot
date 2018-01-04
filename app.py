@@ -1,5 +1,4 @@
-from subprocess import call, Popen, PIPE
-import shlex
+from subprocess import call
 
 call(["pip", "install", "discord.py", "--upgrade"])
 
@@ -38,6 +37,8 @@ async def nobot(message):
     elif message.content.lower().startswith("aktivieren"):
         activated = True
         await client.send_message(message.channel, "b :white_check_mark: Aktiviert")
+        if message.content("ho"):
+            await client.send_message(message.channel, "hey")
 
 @client.event
 async def on_message(message):
