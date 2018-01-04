@@ -1,4 +1,5 @@
-from subprocess import call
+from subprocess import call, Popen, PIPE
+import shlex
 
 call(["pip", "install", "discord.py", "--upgrade"])
 
