@@ -1,6 +1,6 @@
 from subprocess import call
 
-call(["pip", "install", "discord.py", "--update"])
+call(["pip", "install", "discord.py", "--upgrade"])
 
 import discord
 import asyncio
