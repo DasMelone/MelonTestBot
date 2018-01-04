@@ -1,6 +1,9 @@
 import discord
 import asyncio
 from time import sleep
+from subprocess import call
+
+call(["pip", "install", "discord.py", "--update"])
 
 client = discord.Client()
 activated = True
