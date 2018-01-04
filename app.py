@@ -23,22 +23,8 @@ async def nobot(message):
         if message.content.lower().startswith("deaktivieren"):
             activated = False
             await client.send_message(message.channel, "b :x: deaktiviert")
-        else:
-            await client.send_message(message.channel, "b :repeat: versuche " + message.content + " als python befehl auszuführen...")
-            sleep(1)
-            try:
-                out = exec(message.content)
-                await client.send_message(message.channel, "b :white_check_mark: " +  message.content + " ausgeführt output:")
-                sleep(1)
-                await client.send_message(message.channel,"b " + str(out))
-            except:
-                await client.send_message(message.channel, "b :x: Fehler")
-                sleep(1)
-    elif message.content.lower().startswith("aktivieren"):
-        activated = True
-        await client.send_message(message.channel, "b :white_check_mark: Aktiviert")
-        if message.content("ho"):
-            await client.send_message(message.channel, "hey")
+        elif message.content == "ho":
+		await client.send_message(message.channel, "hey")
 
 @client.event
 async def on_message(message):
